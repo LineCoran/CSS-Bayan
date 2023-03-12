@@ -45,11 +45,14 @@ body {
   position: absolute;
   right: 20px;
   top: 10px;
-  border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: black;
   transition: .2s linear;
+  background-image: url("./assets/cross.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(45deg);
 }
 
 .checkbox {
@@ -64,7 +67,7 @@ body {
 }
 
 .checkbox:checked + .label {
-  background-color: gold;
+  transform: rotate(0);
 }
 
 .checkbox:checked + .label + img {
