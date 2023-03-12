@@ -31,36 +31,45 @@ body {
 
 .mem {
   width: 100%;
+  min-height: 3rem;
+  padding-top: 4rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .mem_header {
   display: flex;
   justify-content: space-between;
-  padding: 2%;
   width: 100%;
+  padding-top: 1rem;
 }
 .mem_name {
+  position: absolute;
+  left: 0;
+  top: 1rem;
   font-size: 24px;
-  color: white;
+  font-weight: bold;
+  color: blue;
+  transition: 0.35s linear;
 }
 
 .label {
   position: absolute;
-  right: 1%;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  transition: .2s linear;
+  right: 0;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
   background-image: url("./assets/cross.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(45deg);
+  opacity: 0;
+  transition: .35s linear;
 }
 
 .checkbox {
@@ -70,18 +79,36 @@ body {
 .meme_img {
   width: 0px;
   height: 0px;
-  transition: 0.2s linear;
+  transition: .35s linear;
+  padding-bottom: 0.5rem;
 }
 
-.mem_header:hover + input + label + img{
+.meme:hover > .mem > .label {
+  opacity: 1;
+}
+
+.meme:hover > .mem > .mem_name {
+  color: black;
+}
+
+.mem:hover > img{
   width: 80%;
   height: 80%;
 }
 
-.label:hover + img{
+.label:hover + p + img{
   width: 80%;
   height: 80%;
 }
+
+.mem_name:hover {
+  width: 80%;
+  height: 80%;
+}
+
+.checkbox:checked + .label + p {
+  color: black;
+} 
 
 .checkbox:checked + .label {
   transform: rotate(0);
