@@ -1,0 +1,74 @@
+body {
+  background-color: #c4c6c8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 2px solid #898989;
+}
+
+.meme {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme_title {
+  padding: 2% 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.mem {
+  width: 100%;
+  position: relative;
+}
+
+.mem_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  width: 100%;
+}
+
+.mem_name {
+  font-size: 24px;
+  color: white;
+}
+
+.label {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  transition: .2s linear;
+}
+
+.checkbox {
+  display: none;
+}
+
+.meme_img {
+  width: 200px;
+  height: 200px;
+  transform: scale(0);
+  transition: 0.2s linear;
+}
+
+.checkbox:checked + .label {
+  background-color: gold;
+}
+
+.checkbox:checked + .label + img {
+  width: 100px;
+  height: 100px;
+  transform: scale(1);
+}
