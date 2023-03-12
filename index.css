@@ -61,8 +61,8 @@ body {
   position: absolute;
   right: 0;
   top: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background-image: url("./assets/cross.svg");
   background-position: center center;
   background-repeat: no-repeat;
